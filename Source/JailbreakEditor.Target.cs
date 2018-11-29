@@ -5,10 +5,12 @@ using System.Collections.Generic;
 
 public class JailbreakEditorTarget : TargetRules
 {
-	public JailbreakEditorTarget(TargetInfo Target) : base(Target)
-	{
-		Type = TargetType.Editor;
+    public JailbreakEditorTarget(TargetInfo Target) : base(Target)
+    {
+        Type = TargetType.Editor;
+        bUseUnityBuild = false;
+        bUsePCHFiles = false;
 
-		ExtraModuleNames.AddRange( new string[] { "Jailbreak" } );
-	}
+        ExtraModuleNames.AddRange(new string[] { "Jailbreak" });
+    }
 }
